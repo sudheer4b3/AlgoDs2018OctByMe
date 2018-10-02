@@ -2,7 +2,28 @@ package heap;
 
 public class Heapify {
 
+    private int parentIndex(int pos)
+    {
+        return (pos-1) / 2;
+    }
 
+    private int left(int pos)
+    {
+        return (2 * pos + 1);
+    }
+
+    private int right(int pos)
+    {
+        return (2 * pos) + 2;
+    }
+
+    private void swap(int[] arr, int fpos, int spos)
+    {
+        int tmp;
+        tmp = arr[fpos];
+        arr[fpos] = arr[spos];
+        arr[spos] = tmp;
+    }
 
     void heapify(int arr[], int n, int i)
     {
@@ -30,13 +51,36 @@ public class Heapify {
         }
     }
 
-    private  void buildHeap(int[] arr){
-        int size = arr.length;
+   private int  extractmax(int arr[] , int n){
 
+        if(arr.length<1) {
+            System.out.println("error");
+            return  -1;
+        }
+         int max = arr[0];
+        arr[0] = arr[arr.length -1];
+       heapify(arr, arr.length, 0);
+       return  max;
+   }
+    private void  increaseKey(int arr[] , int i, int key) {
+
+        if(key < arr[i]){
+         // error
+        }
+        arr[i] = key;
+
+        while (i>1 && arr[parentIndex(i)] < arr[i]) {
+
+            swap(arr,parentIndex(i),i);
+        }
+
+    }
+
+        private  void buildHeap(int[] arr){
+        int size = arr.length;
+        // onlr for non leaf nodes you have to run
             for (int i = size / 2 - 1; i >= 0; i--)
                 heapify(arr, size, i);
-
-
     }
 
     public static void main(String args[])
