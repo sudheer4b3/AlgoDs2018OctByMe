@@ -1,0 +1,29 @@
+{
+  "id": {
+   "value": "AWS_INFRA_SHIPMENT"
+  },
+  "description": {
+   "value": "Shipment for AWS Infra"
+  },
+  "shipmentClassPropertyList": [{
+    "id": "carrierCode",
+    "value": "carrierCode",
+    "dataType": "STRING",
+    "isRequired": "true"
+   },
+
+      {
+       "id": "plantCode",
+       "value": "plantCode",
+       "dataType": "STRING",
+       "isRequired": "false"
+      },
+   {
+    "id": "transportationMode",
+    "value": "transportationMode",
+    "dataType": "STRING",
+    "isRequired": "true"
+   }]
+
+
+ }
