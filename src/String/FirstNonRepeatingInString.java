@@ -6,7 +6,7 @@ import java.io.*;
 import java.util.*; 
 import java.lang.*; 
   
-class FirstNonRepeating
+class FirstNonRepeatingInString
 { 
 /* The function returns index  
 of the first non-repeating  
@@ -21,7 +21,7 @@ static int firstNonRepeating(String str)
     // as absent. 
     int arr[] = new int[NO_OF_CHARS]; 
     for (int i = 0;  
-             i < NO_OF_CHARS; i++) 
+             i < NO_OF_CHARS; i++)
         arr[i] = -1; 
   
     // After below loop, the  
@@ -41,7 +41,7 @@ static int firstNonRepeating(String str)
     } 
   
     int res = Integer.MAX_VALUE; 
-    for (int i = 0; i < NO_OF_CHARS; i++) 
+    for (int i = 0; i < NO_OF_CHARS; i++)
   
         // If this character occurs  
         // only once and appears before 
